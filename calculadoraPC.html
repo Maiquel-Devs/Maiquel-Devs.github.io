@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Poder de Compra</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container principal */
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Títulos */
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Formulário */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #6a11cb;
+            box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+        }
+
+        /* Botão */
+        button {
+            background: #6a11cb;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #4a0da8;
+        }
+
+        /* Resultado */
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 2px dashed #6a11cb;
+            border-radius: 8px;
+        }
+
+        #result h2 {
+            color: #333;
+        }
+
+        #result-text {
+            font-size: 1.2rem;
+            color: #6a11cb;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Poder de Compra</h1>
+        <form id="pc-form">
+            <div class="form-group">
+                <label for="initial-value">Poder de Compra Inicial (PC):</label>
+                <input type="number" id="initial-value" placeholder="Digite o PC inicial" required>
+            </div>
+            <div class="form-group">
+                <label for="percentage">Variação Percentual (%):</label>
+                <input type="number" id="percentage" placeholder="Digite a variação percentual" required>
+            </div>
+            <button type="button" id="calculate-btn">Calcular</button>
+        </form>
+        <div id="result">
+            <h2>Resultado:</h2>
+            <p id="result-text">Insira os valores e clique em calcular.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
