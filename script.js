@@ -1,7 +1,7 @@
 // Função para calcular o Poder de Compra
 function calcularPC() {
-    const initialValue = parseFloat(document.getElementById('initial-value').value);
-    const percentage = parseFloat(document.getElementById('percentage').value);
+    const initialValue = parseFloat(document.getElementById('initial-value').value.replace(',', '.'));
+    const percentage = parseFloat(document.getElementById('percentage').value.replace(',', '.'));
 
     if (isNaN(initialValue) || isNaN(percentage)) {
         document.getElementById('result-text').textContent = "Por favor, insira valores válidos.";
@@ -59,3 +59,4 @@ document.getElementById('percentage').addEventListener('keydown', function(event
 
 // Quando o botão for clicado, chama a função de cálculo
 document.getElementById('calculate-btn').addEventListener('click', calcularPC);
+
